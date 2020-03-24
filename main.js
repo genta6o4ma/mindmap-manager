@@ -16,7 +16,7 @@ const main = () => {
   const mindmapsColName = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues();
   const mindmapsRecords = sheet.getRange(2, 1, sheet.getLastRow() - 1, sheet.getLastColumn());
 
-  const mapvalues = mindmaps.getValues();
+  const mapvalues = mindmapsRecords.getValues();
 
   for(let i = 0; i < mapvalues.length; i++) {
     for(let j = 0; j < mapvalues[i].length; j++) {
