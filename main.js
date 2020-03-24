@@ -9,6 +9,13 @@ const PHASE = {
 };
 Object.freeze(PHASE);
 
+const doGet = () => {
+  const temp = HtmlService.createTemplateFromFile('index');
+  const output = temp.evaluate();
+
+  return output;
+}
+
 const main = () => {
   const ss = SpreadsheetApp.getActiveSpreadsheet();
   const sheet = ss.getSheetByName('mindmaps');
