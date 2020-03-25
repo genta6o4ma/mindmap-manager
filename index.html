@@ -6,5 +6,28 @@
 <body>
   <h1>Mindmap Manager</h1>
   <p>マインドマップを管理します</p>
+  <div id="main-div">
+    <p>新規マインドマップの追加</p>
+    <div id="input-area">
+      <p>マップ名<input type="text" id="mapname"></p>
+      <p><button id="add-new-map">追加</button></p>
+    </div>
+  </div>
+  <div id="select-mode">
+    <p><button>新規追加</button><button>マップ編集</button><button>マップ一覧</button></p>
+  </div>
+  <div id="log-div">
+    <p>ここにログが表示されます。</p>
+  </div>
 </body>
+<script>
+  document.getElementById('add-new-map').onclick = addNewMap();
+
+  const addNewMap = () => {
+
+  };
+  const dateFormat = (date) => {
+    const formatted = `${date.getFullYear()}/${(date.getMonth()+1).toString().padStart(2, '0')}/${date.getDate().toString().padStart(2, '0')} `;
+  };
+</script>
 </html>
